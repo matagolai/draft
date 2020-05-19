@@ -1,418 +1,191 @@
-*,
-*:before,
-*:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>HM Wedding Draft Site</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <a href="index.html"> <img src="img/newLogo.png" alt="logo" /></a>
+      </div>
 
-@font-face {
-  font-family: Satisfy;
-  src: url("../fonts/Satisfy-Regular.ttf");
-}
-@font-face {
-  font-family: PopLight;
-  src: url("../fonts/Poppins-Light.ttf");
-}
-@font-face {
-  font-family: PopRegular;
-  src: url("../fonts/Poppins-Regular.ttf");
-}
-@font-face {
-  font-family: PopMedium;
-  src: url("../fonts/Poppins-Medium.ttf");
-}
+      <nav>
+        <ul class="nav-links">
+          <li><a class="nav-link active" href="index.html"> Home</a></li>
+          <li><a class="nav-link" href="#"> Package</a></li>
+          <li><a class="nav-link" href="#"> Photo Plan</a></li>
+          <li><a class="nav-link" href="#"> Album</a></li>
+          <li><a class="nav-link" href="#"> Blog</a></li>
+          <li><a class="nav-link contact" href="#"> Contact Me!</a></li>
+        </ul>
+      </nav>
+    </header>
 
-body {
-  font-family: PopRegular, Helvetica, sans-serif;
-  background-image: url("../img/palmBG.jpg");
-  background-attachment: fixed;
-  background-size: 100%;
-}
+    <main>
+      <section class="introPage">
+        <div class="introduction">
+          <div id="intro-heart">
+            <h1 class="intro-title">HM Wedding Saipan</h1>
+            <hr class="hr-light" />
+            <img src="img/smallHeart.png" alt="cute heart" />
+          </div>
+          <div class="intro-details">
+            <p>
+              Imagine your special day, surrounded by natural beauty and
+              tranquility, where there is no other place better to say, "I
+              Do".<br /><br />
+              Let's get married in Saipan!
+            </p>
+          </div>
+        </div>
+        <div class="slideshow">
+          <div>
+            <picture>
+              <source
+                media="(max-width: 1200px)"
+                srcset="img/hyattGardenMd.jpg"
+              />
+              <img src="img/hyattGarden.jpg" alt="Garden Wedding Setup" />
+            </picture>
+          </div>
+          <div>
+            <picture>
+              <source
+                media="(max-width: 1200px)"
+                srcset="img/hyattChapelMd.jpg"
+              />
+              <img src="img/hyattChapel.jpg" alt="Garden Wedding Setup" />
+            </picture>
+          </div>
+          <div>
+            <picture>
+              <source
+                media="(max-width: 1200px)"
+                srcset="img/hyattChapelMd.jpg"
+              />
+              <img src="img/surfBeach.jpg" alt="Garden Wedding Setup" />
+            </picture>
+          </div>
+        </div>
+      </section>
 
-main {
-  color: #3d3d3d;
-  cursor: default;
-}
-
-header {
-  width: 100%;
-  margin: auto;
-  display: flex;
-  height: 10vh;
-  justify-content: space-between;
-  background-image: url("../img/navBG.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-nav {
-  margin: 0 5%;
-}
-.nav-links {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  list-style: none;
-}
-
-.nav-link {
-  color: #6f9e36b4;
-  height: 100%;
-  text-decoration: none;
-  margin-left: 2em;
-  font-size: 1.2em;
-  transition: 0.4s;
-  border-bottom: 1px solid #688d4356;
-}
-
-.nav-link:hover {
-  color: #688d43;
-  border-color: #fca402cc;
-  border-bottom: 1px solid #d49f3e;
-}
-
-.active {
-  color: #688d43;
-  text-transform: uppercase;
-  font-weight: 500;
-  border-bottom: 2px solid #fca402cc;
-}
-
-.contact {
-  border: 2px solid #d49f3e9d;
-  border-radius: 5px;
-  padding: 3px 10px;
-  font-family: Satisfy;
-  font-size: 1.3em;
-}
-
-.contact:hover {
-  background-color: #f8fc0205;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  margin-left: 5%;
-}
-
-.logo-container img {
-  width: 100%;
-  animation: fadeIn 1s ease-in;
-}
-
-.introPage {
-  display: flex;
-  height: 90vh;
-  margin: 0 5%;
-}
-
-.introduction {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  animation: fadeIn 1s ease-in;
-}
-
-.intro-title {
-  font-family: Satisfy;
-  font-size: 400%;
-  color: #3d3d3d;
-}
-
-#intro-heart {
-  display: flex;
-  flex-direction: column;
-}
-
-#intro-heart img {
-  align-self: center;
-}
-
-.hr-light {
-  width: 50%;
-  margin-bottom: 2%;
-  align-self: center;
-}
-
-.intro-details {
-  font-size: 1.5em;
-  margin: 0 10%;
-  padding-top: 5%;
-  color: #3d3d3d;
-  text-align: center;
-}
-
-.slideshow {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.slideshow > div {
-  position: absolute;
-}
-
-.slideshow img {
-  border-radius: 2%;
-  width: 100%;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
-}
-
-.about {
-  height: 80vh;
-  display: flex;
-  margin: 0 5%;
-}
-
-.about h2 {
-  font-family: Satisfy;
-  font-size: 4em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.aboutTitle {
-  margin-left: 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-  animation: fadeIn 1s ease-in;
-}
-
-.aboutTitle img {
-  display: block;
-  width: auto;
-  height: auto;
-  margin: 0 auto 15% auto;
-  box-shadow: 0px 0px 25px rgba(48, 48, 48, 0.349);
-  border-radius: 5px;
-}
-
-.aboutInfo {
-  margin-right: 5%;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 1.6em;
-}
-
-.aboutInfo p {
-  font-family: PopLight;
-}
-
-.hrInfo {
-  width: 100%;
-  margin: 5% 0;
-  border-top: 5px solid #3d3d3da4;
-}
-
-#hrAbout {
-  width: 20%;
-  margin: 0 auto 8% auto;
-}
-
-.str {
-  margin: auto 20%;
-  height: 70vh;
-}
-
-#hrStr {
-  width: 20%;
-  margin-bottom: 5%;
-}
-
-#str-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: Satisfy, Helvetice, sans-serif;
-  font-size: 3.5em;
-}
-
-.str-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  font-size: 1.5em;
-  text-align: center;
-  background-image: url("../img/hmLogoFade.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#icons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 7% 0;
-}
-
-#icons img {
-  width: 13%;
-  padding-bottom: 3%;
-}
-
-#icons p {
-  padding: 0 10%;
-  text-shadow: 2px 2px 6px rgba(187, 187, 187, 0.774);
-}
-
-.concept {
-  margin: 0 10%;
-  height: 100vh;
-}
-
-.conceptTitle {
-  font-family: Satisfy, Helvetica, sans-serif;
-  font-size: 3.5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 3% 0;
-}
-
-#hrConcept {
-  width: 12%;
-}
-
-.conceptPage {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-#road img {
-  width: 90%;
-  border-radius: 10px;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
-}
-
-.conceptItems {
-  font-size: 1.2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0 2%;
-  text-align: center;
-}
-
-.conceptItems h5 {
-  font-size: 1.2em;
-  padding-bottom: 4%;
-}
-
-.sidePhotos {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.sidePhotos img {
-  border-radius: 10px;
-  width: 90%;
-  margin-left: 5%;
-}
-
-footer {
-  text-align: center;
-  cursor: default;
-  height: 5vh;
-}
-
-/*
-  -------------------------------------------------------
-  Keyframes
-  -------------------------------------------------------
-*/
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100;
-  }
-}
-
-/*
-  -------------------------------------------------------
-  Media Queries
-  -------------------------------------------------------
-*/
-
-/* Media Queries */
-
-@media (max-width: 576px) {
-}
-@media (max-width: 768px) {
-}
-@media (max-width: 992px) {
-}
-@media (max-width: 1200px) {
-  .introPage {
-    flex-direction: column;
-  }
-  .nav-link {
-    font-size: 1em;
-  }
-
-  .introduction {
-    margin-top: 5%;
-    height: 40vh;
-    font-size: 0.9em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  #intro-heart {
-    margin-left: 15%;
-    text-align: center;
-    flex: 1;
-  }
-
-  .intro-details {
-    flex: 1;
-    padding: 5% 0;
-    font-family: PopLight, Helvetica, sans-serif;
-  }
-
-  .slideshow {
-    height: 60vh;
-    width: 80%;
-    margin: 0 auto;
-  }
-  .slideshow img {
-    width: 100%;
-  }
-}
-
-/*
-Extra small (xs) devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap
-
-Small (sm) devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-Medium (md) devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-Large (lg) devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-Extra (xl) large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
+      <section class="about">
+        <div class="aboutTitle">
+          <h2>About</h2>
+          <hr id="hrAbout" />
+          <img src="img/hiromiMain.jpg" alt="Hiromi" />
+        </div>
+        <div class="aboutInfo">
+          <hr class="hrInfo" />
+          <h3>Hiromi Matagolai</h3>
+          <h5>Wedding planner, Owner</h5>
+          <br />
+          <p>Biography:</p>
+          <br />
+          <p>
+            I moved to Saipan on 1985, and married in 1988. I started my wedding
+            coordinator career in 1995 working for Fukada Wedding. I later
+            became a Couture Naoco Saipan branch manager in 2001. Finally, I
+            created my very own wedding company, HM WEDDING SAIPAN, in 2019. My
+            hobbies are windsurfing, SUP, and snorkeling.
+          </p>
+          <br />
+          <p>Thank you for visiting HM Wedding Saipan today!</p>
+          <hr class="hrInfo" />
+        </div>
+      </section>
+      <section class="str">
+        <div id="str-title">
+          <h3>Strengths</h3>
+          <hr id="hrStr" />
+        </div>
+        <div class="str-list">
+          <div id="icons">
+            <img src="img/fast.svg" alt="clock" />
+            <p>
+              Respond quickly, including local information because we live in
+              Saipan
+            </p>
+          </div>
+          <div id="icons">
+            <img src="img/check.svg" alt="check" />
+            <p>
+              24 years of experience, achievements, and bringing smiles
+            </p>
+          </div>
+          <div id="icons">
+            <img src="img/language.svg" alt="language bubble" />
+            <p>
+              Team members are professional Japanese agent
+            </p>
+          </div>
+          <div id="icons">
+            <img src="img/thumbsUp.svg" alt="thumbsUp" />
+            <p>
+              Respond quickly, including local information because we live in
+              Saipan
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="concept">
+        <div class="conceptTitle">
+          <h3>Concept</h3>
+          <hr id="hrConcept" />
+        </div>
+        <div class="conceptPage">
+          <div id="road">
+            <img src="img/coupleRoad.jpg" alt="couple holding hands on road" />
+          </div>
+          <div class="conceptItems">
+            <div class="conceptItem">
+              <h5>Our Full Attention On Your Special Day</h5>
+              <hr />
+              <p>
+                Your special day is our priority. With one wedding ceremony a
+                day package plan, our Saipan team will surely create an original
+                wedding day just for you.
+              </p>
+            </div>
+            <div class="conceptItem">
+              <h5>Proper Price</h5>
+              <hr />
+              <p>
+                At HM Wedding, we understand that every little things matter.
+                Couples can bring their own attire and accessories, free of
+                charge. Feel free to contact us directly for any other price
+                inquiry.
+              </p>
+            </div>
+            <div class="conceptItem">
+              <h5>Saipan's unique wedding location</h5>
+              <hr />
+              <p>
+                Wedding venue is surrounded by our nature- rich Saipan Island.
+                We prepare special wedding plans unique like our garden wedding,
+                white sand beach wedding, and cruise wedding surrounded by the
+                sea of Mariana blue.
+              </p>
+            </div>
+          </div>
+          <div class="sidePhotos">
+            <img src="img/bridePrepThin.jpg" />
+            <img src="img/coupleFoodThin.jpg" />
+            <img src="img/coupleBeachThin.jpg" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <small
+        >Designed by Peter Matagolai<br />&copy; hmsaipan.com All Rights
+        Reserved.</small
+      >
+    </footer>
+  </body>
+</html>
