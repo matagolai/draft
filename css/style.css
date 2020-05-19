@@ -43,7 +43,7 @@ header {
   display: flex;
   height: 10vh;
   justify-content: space-between;
-  background-image: url(../img/navBG.png);
+  background-image: url("../img/navBG.png");
   background-repeat: no-repeat;
   background-size: 100%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -64,7 +64,7 @@ nav {
   height: 100%;
   text-decoration: none;
   margin-left: 2em;
-  font-size: 1.4em;
+  font-size: 1.2em;
   transition: 0.4s;
   border-bottom: 1px solid #688d4356;
 }
@@ -87,7 +87,7 @@ nav {
   border-radius: 5px;
   padding: 3px 10px;
   font-family: Satisfy;
-  font-size: 1.6em;
+  font-size: 1.3em;
 }
 
 .contact:hover {
@@ -126,9 +126,19 @@ nav {
   color: #3d3d3d;
 }
 
+#intro-heart {
+  display: flex;
+  flex-direction: column;
+}
+
+#intro-heart img {
+  align-self: center;
+}
+
 .hr-light {
   width: 50%;
   margin-bottom: 2%;
+  align-self: center;
 }
 
 .intro-details {
@@ -341,4 +351,68 @@ footer {
   -------------------------------------------------------
   Media Queries
   -------------------------------------------------------
+*/
+
+/* Media Queries */
+
+@media (max-width: 576px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 992px) {
+}
+@media (max-width: 1200px) {
+  .introPage {
+    flex-direction: column;
+  }
+  .nav-link {
+    font-size: 1em;
+  }
+
+  .introduction {
+    margin-top: 5%;
+    height: 40vh;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #intro-heart {
+    margin-left: 15%;
+    text-align: center;
+    flex: 1;
+  }
+
+  .intro-details {
+    flex: 1;
+    padding: 5% 0;
+    font-family: PopLight, Helvetica, sans-serif;
+  }
+
+  .slideshow {
+    height: 60vh;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .slideshow img {
+    width: 100%;
+  }
+}
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
 */
