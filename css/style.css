@@ -1,0 +1,344 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Satisfy;
+  src: url(/fonts/Satisfy-Regular.ttf);
+}
+@font-face {
+  font-family: PopLight;
+  src: url(/fonts/Poppins-Light.ttf);
+}
+@font-face {
+  font-family: PopRegular;
+  src: url(/fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: PopMedium;
+  src: url(/fonts/Poppins-Medium.ttf);
+}
+
+body {
+  font-family: PopRegular, Helvetica, sans-serif;
+  background-image: url(/img/palmBG.jpg);
+  background-attachment: fixed;
+  background-size: 100%;
+}
+
+main {
+  color: #3d3d3d;
+  cursor: default;
+}
+
+header {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+  background-image: url(/img/navBG.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  margin: 0 5%;
+}
+.nav-links {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-link {
+  color: #6f9e36b4;
+  height: 100%;
+  text-decoration: none;
+  margin-left: 2em;
+  font-size: 1.4em;
+  transition: 0.4s;
+  border-bottom: 1px solid #688d4356;
+}
+
+.nav-link:hover {
+  color: #688d43;
+  border-color: #fca402cc;
+  border-bottom: 1px solid #d49f3e;
+}
+
+.active {
+  color: #688d43;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-bottom: 2px solid #fca402cc;
+}
+
+.contact {
+  border: 2px solid #d49f3e9d;
+  border-radius: 5px;
+  padding: 3px 10px;
+  font-family: Satisfy;
+  font-size: 1.6em;
+}
+
+.contact:hover {
+  background-color: #f8fc0205;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+}
+
+.logo-container img {
+  width: 100%;
+  animation: fadeIn 1s ease-in;
+}
+
+.introPage {
+  display: flex;
+  height: 90vh;
+  margin: 0 5%;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  animation: fadeIn 1s ease-in;
+}
+
+.intro-title {
+  font-family: Satisfy;
+  font-size: 400%;
+  color: #3d3d3d;
+}
+
+.hr-light {
+  width: 50%;
+  margin-bottom: 2%;
+}
+
+.intro-details {
+  font-size: 1.5em;
+  margin: 0 10%;
+  padding-top: 5%;
+  color: #3d3d3d;
+  text-align: center;
+}
+
+.slideshow {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.slideshow > div {
+  position: absolute;
+}
+
+.slideshow img {
+  border-radius: 2%;
+  width: 100%;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
+}
+
+.about {
+  height: 80vh;
+  display: flex;
+  margin: 0 5%;
+}
+
+.about h2 {
+  font-family: Satisfy;
+  font-size: 4em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aboutTitle {
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  animation: fadeIn 1s ease-in;
+}
+
+.aboutTitle img {
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0 auto 15% auto;
+  box-shadow: 0px 0px 25px rgba(48, 48, 48, 0.349);
+  border-radius: 5px;
+}
+
+.aboutInfo {
+  margin-right: 5%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.6em;
+}
+
+.aboutInfo p {
+  font-family: PopLight;
+}
+
+.hrInfo {
+  width: 100%;
+  margin: 5% 0;
+  border-top: 5px solid #3d3d3da4;
+}
+
+#hrAbout {
+  width: 20%;
+  margin: 0 auto 8% auto;
+}
+
+.str {
+  margin: auto 20%;
+  height: 70vh;
+}
+
+#hrStr {
+  width: 20%;
+  margin-bottom: 5%;
+}
+
+#str-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Satisfy, Helvetice, sans-serif;
+  font-size: 3.5em;
+}
+
+.str-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.5em;
+  text-align: center;
+  background-image: url("/img/hmLogoFade.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 7% 0;
+}
+
+#icons img {
+  width: 13%;
+  padding-bottom: 3%;
+}
+
+#icons p {
+  padding: 0 10%;
+  text-shadow: 2px 2px 6px rgba(187, 187, 187, 0.774);
+}
+
+.concept {
+  margin: 0 10%;
+  height: 100vh;
+}
+
+.conceptTitle {
+  font-family: Satisfy, Helvetica, sans-serif;
+  font-size: 3.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3% 0;
+}
+
+#hrConcept {
+  width: 12%;
+}
+
+.conceptPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#road img {
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
+}
+
+.conceptItems {
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 2%;
+  text-align: center;
+}
+
+.conceptItems h5 {
+  font-size: 1.2em;
+  padding-bottom: 4%;
+}
+
+.sidePhotos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.sidePhotos img {
+  border-radius: 10px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+footer {
+  text-align: center;
+  cursor: default;
+  height: 5vh;
+}
+
+/*
+  -------------------------------------------------------
+  Keyframes
+  -------------------------------------------------------
+*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+/*
+  -------------------------------------------------------
+  Media Queries
+  -------------------------------------------------------
+*/
