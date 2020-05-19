@@ -10,24 +10,24 @@
 
 @font-face {
   font-family: Satisfy;
-  src: url(/fonts/Satisfy-Regular.ttf);
+  src: url("../fonts/Satisfy-Regular.ttf");
 }
 @font-face {
   font-family: PopLight;
-  src: url(/fonts/Poppins-Light.ttf);
+  src: url("../fonts/Poppins-Light.ttf");
 }
 @font-face {
   font-family: PopRegular;
-  src: url(/fonts/Poppins-Regular.ttf);
+  src: url("../fonts/Poppins-Regular.ttf");
 }
 @font-face {
   font-family: PopMedium;
-  src: url(/fonts/Poppins-Medium.ttf);
+  src: url("../fonts/Poppins-Medium.ttf");
 }
 
 body {
   font-family: PopRegular, Helvetica, sans-serif;
-  background-image: url(/img/palmBG.jpg);
+  background-image: url("../img/palmBG.jpg");
   background-attachment: fixed;
   background-size: 100%;
 }
@@ -43,7 +43,7 @@ header {
   display: flex;
   height: 10vh;
   justify-content: space-between;
-  background-image: url(/img/navBG.png);
+  background-image: url("../img/navBG.png");
   background-repeat: no-repeat;
   background-size: 100%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -239,7 +239,7 @@ nav {
   grid-template-columns: 1fr 1fr;
   font-size: 1.5em;
   text-align: center;
-  background-image: url("/img/hmLogoFade.png");
+  background-image: url("img/hmLogoFade.png");
   background-repeat: no-repeat;
   background-position: center;
 }
