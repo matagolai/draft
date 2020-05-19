@@ -239,7 +239,7 @@ nav {
   grid-template-columns: 1fr 1fr;
   font-size: 1.5em;
   text-align: center;
-  background-image: url("img/hmLogoFade.png");
+  background-image: url("../img/hmLogoFade.png");
   background-repeat: no-repeat;
   background-position: center;
 }
