@@ -384,7 +384,7 @@ footer {
 
 @media (max-width: 576px) {
   body {
-    background-image: url(/img/palmBGXs.jpg);
+    background-image: url("../img/palmBGXs.jpg");
     background-size: 70%;
     background-repeat: no-repeat;
   }
