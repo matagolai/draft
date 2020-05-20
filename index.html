@@ -11,7 +11,9 @@
     <header>
       <nav>
         <div class="logo-container">
-          <a href="index.html"> <img src="img/newLogo.png" alt="logo" /></a>
+          <a href="index.html">
+            <img id="logo" src="img/newLogo.png" alt="logo"
+          /></a>
         </div>
 
         <ul class="nav-links two">
@@ -153,7 +155,16 @@
         </div>
         <div class="conceptPage">
           <div id="road">
-            <img src="img/coupleRoad.jpg" alt="couple holding hands on road" />
+            <picture>
+              <source
+                media="(max-width: 576px)"
+                srcset="img/coupleRoadXS.jpg"
+              />
+              <img
+                src="img/coupleRoad.jpg"
+                alt="couple holding hands on road"
+              />
+            </picture>
           </div>
           <div class="conceptItems">
             <div class="conceptItem">
@@ -177,7 +188,7 @@
             </div>
             <div class="conceptItem">
               <h5>Saipan's unique wedding location</h5>
-              <hr />
+              <hr id="con" />
               <p>
                 Wedding venue is surrounded by our nature- rich Saipan Island.
                 We prepare special wedding plans unique like our garden wedding,
@@ -187,9 +198,24 @@
             </div>
           </div>
           <div class="sidePhotos">
-            <img src="img/bridePrepThin.jpg" />
-            <img src="img/coupleFoodThin.jpg" />
-            <img src="img/coupleBeachThin.jpg" />
+            <picture>
+              <source media="(max-width: 576px)" srcset="img/bridePrepXs.jpg" />
+              <img src="img/bridePrepTest.jpg" />
+            </picture>
+            <picture>
+              <source
+                media="(max-width: 576px)"
+                srcset="img/coupleFoodXs.jpg"
+              />
+              <img src="img/coupleFoodTest.jpg" />
+            </picture>
+            <picture>
+              <source
+                media="(max-width: 576px)"
+                srcset="img/coupleBeachXs.jpg"
+              />
+              <img src="img/coupleBeachTest.jpg" />
+            </picture>
           </div>
         </div>
       </section>
