@@ -557,7 +557,7 @@ footer {
 
   .introduction {
     margin-top: 5%;
-    height: 40vh;
+    height: 100%;
     font-size: 0.9em;
     display: flex;
     flex-direction: row;
