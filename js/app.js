@@ -1,12 +1,10 @@
-$(document).ready(function () {
-  $(".slideshow > div:gt(0)").hide();
+const navSlide = () => {
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".nav-links");
+  // Toggle Nav
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("nav-active");
+  });
+};
 
-  setInterval(function () {
-    $(".slideshow > div:first")
-      .fadeOut(2000)
-      .next()
-      .fadeIn(2000)
-      .end()
-      .appendTo(".slideshow");
-  }, 6000);
-});
+navSlide();
