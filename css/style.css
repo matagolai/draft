@@ -27,7 +27,7 @@
 
 body {
   overflow-x: hidden;
-  background-image: url("/img/palmBGXs.jpg");
+  background-image: url("../img/palmBGXs.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-attachment: fixed;
@@ -164,7 +164,7 @@ hr {
 .str-list {
   text-align: center;
   margin: 5% 10%;
-  background-image: url("/img/hmLogoFade.png");
+  background-image: url("../img/hmLogoFade.png");
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: center;
@@ -264,7 +264,6 @@ h5 {
 }
 
 .follow-links {
-  background-color: aqua;
   cursor: pointer;
   width: 100%;
 }
@@ -309,14 +308,14 @@ footer {
 }
 
 .fixed-bg-1 {
-  background-image: url("/img/coupleRoad.jpg");
+  background-image: url("../img/coupleRoad.jpg");
 }
 .fixed-bg-2 {
-  background-image: url("/img/bridePrep.jpg");
+  background-image: url("../img/bridePrep.jpg");
   background-position: left;
 }
 .fixed-bg-3 {
-  background-image: url("/img/coupleBeach.jpg");
+  background-image: url("../img/coupleBeach.jpg");
 }
 
 /*
