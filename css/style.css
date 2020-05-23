@@ -26,81 +26,76 @@
 }
 
 body {
-  font-family: PopRegular, Helvetica, sans-serif;
-  background-image: url("../img/palmBG.jpg");
+  overflow-x: hidden;
+  background-image: url("/img/palmBGXs.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
   background-attachment: fixed;
-  background-size: 100%;
+  cursor: default;
 }
 
 main {
-  color: #3d3d3d;
-  cursor: default;
-  background-color: rgba(255, 255, 255, 0.63);
-}
-
-header {
-  background-color: #fff;
+  margin-top: 35%;
 }
 
 nav {
   width: 100%;
   display: flex;
-  height: 10vh;
-  justify-content: space-between;
-  background-image: url("../img/navBG.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right;
-  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.486);
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  box-shadow: 1px 1px 10px #3d3d3d4f;
+}
+
+.logo-container {
+  padding-top: 0.4em;
+}
+
+.logo-container img {
+  width: 80%;
+  margin: auto 0;
+  animation: fadeIn 0.5s ease-in;
 }
 
 .nav-links {
+  position: absolute;
+  right: 0;
+  top: 10vh;
+  height: 90vh;
+  width: 50%;
   display: flex;
-  height: 100%;
-  margin: 0 6%;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+  background-color: #fff;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 999;
+}
+
+.nav-item {
   list-style: none;
-  letter-spacing: 1px;
 }
 
 .nav-link {
-  color: #6f9e36b4;
-  height: 100%;
   text-decoration: none;
-  margin-left: 2em;
-  font-size: 1.2em;
-  transition: 0.4s;
-  border-bottom: 1px solid #688d4356;
-}
-
-.nav-link:hover {
-  color: #688d43;
-  border-color: #fca402cc;
-  border-bottom: 1px solid #d49f3e;
+  color: #6f9e36b4;
 }
 
 .active {
-  color: #688d43;
-  text-transform: uppercase;
-  font-weight: 500;
   border-bottom: 2px solid #fca402cc;
-}
-
-.contact {
-  border: 2px solid #d49f3e9d;
-  border-radius: 5px;
-  padding: 3px 10px;
-  font-family: Satisfy;
-  font-size: 1.3em;
-}
-
-.contact:hover {
-  background-color: #f8fc0205;
+  color: #688d43;
 }
 
 .burger {
-  margin: auto;
-  display: none;
+  display: block;
+  border: 2px solid #3d3d3d;
+  border-radius: 5px;
+  padding: 1px;
   cursor: pointer;
 }
 
@@ -111,253 +106,217 @@ nav {
   margin: 5px;
 }
 
-.logo-container {
-  margin: auto 0 auto 5%;
-}
-
-.logo-container img {
-  width: 100%;
-  animation: fadeIn 1s ease-in;
-}
-
-.introPage {
-  display: flex;
-  height: 90vh;
-  margin: 0 5%;
-}
-
-.introduction {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  animation: fadeIn 1s ease-in;
+.nav-active {
+  transform: translateX(0);
+  z-index: 999;
 }
 
 .intro-title {
-  font-family: Satisfy;
-  font-size: 400%;
-  color: #3d3d3d;
-}
-
-#intro-heart {
-  display: flex;
-  flex-direction: column;
-}
-
-#intro-heart img {
-  align-self: center;
-}
-
-.hr-light {
-  width: 50%;
-  margin-bottom: 2%;
-  align-self: center;
-}
-
-.intro-details {
-  font-size: 1.5em;
-  margin: 0 10%;
-  padding-top: 5%;
-  color: #3d3d3d;
-  text-align: center;
-}
-
-.slideshow {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.slideshow > div {
-  position: absolute;
-}
-
-.slideshow img {
-  border-radius: 2%;
-  width: 100%;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
-}
-
-.about {
-  height: 80vh;
-  display: flex;
-  margin: 0 5%;
-}
-
-.about h3 {
-  font-family: Satisfy;
-  font-size: 3.5em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.about h4 {
-  font-family: Satisfy, Arial, Helvetica, sans-serif;
-  font-size: 1.5em;
-}
-
-.aboutTitle {
-  margin-left: 5%;
+  margin: 5% 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 1;
   animation: fadeIn 1s ease-in;
 }
 
-.aboutTitle img {
-  display: block;
-  width: auto;
-  height: auto;
-  margin: 0 auto 15% auto;
-  box-shadow: 0px 0px 25px rgba(48, 48, 48, 0.349);
-  border-radius: 5px;
+.intro-title p {
+  margin: 5% 5%;
 }
 
-.aboutInfo {
-  margin-right: 5%;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 1.6em;
-}
-
-.aboutInfo p {
-  font-family: PopLight;
-}
-
-.hrInfo {
-  width: 100%;
+.intro-title img {
+  width: 50px;
+  align-self: center;
   margin: 5% 0;
-  border-top: 5px solid #3d3d3da4;
 }
 
-#hrAbout {
-  width: 20%;
-  margin: 0 auto 8% auto;
-}
-
-.str {
-  margin: auto 20%;
-  height: 70vh;
-}
-
-#hrStr {
-  width: 20%;
-  margin-bottom: 5%;
-}
-
-#str-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: Satisfy, Helvetice, sans-serif;
-  font-size: 3.5em;
-}
-
-.str-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  font-size: 1.5em;
-  text-align: center;
-  background-image: url("../img/hmLogoFade.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#icons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 7% 0;
-}
-
-#icons img {
-  width: 13%;
-  padding-bottom: 3%;
-}
-
-#icons p {
-  padding: 0 10%;
-  text-shadow: 2px 2px 6px rgba(187, 187, 187, 0.774);
-}
-
-.concept {
-  height: auto;
-}
-
-.conceptTitle {
-  font-family: Satisfy, Helvetica, sans-serif;
-  font-size: 3.5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 0;
-}
-
-#hrConcept {
-  width: 12%;
-}
-
-.conceptPage {
-  margin: 0 5%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-#road img {
+.slideshow {
   width: 100%;
-  border-radius: 10px;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
+}
+
+.slideshow img {
+  width: 100%;
 }
 
 hr {
-  width: 50%;
-  margin: 5% auto;
+  margin-bottom: 5%;
+  color: #3d3d3d;
+  opacity: 0.5;
+  position: relative;
+  z-index: -1;
 }
 
-.conceptItems {
-  font-size: 1.2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0 2%;
+.hr-about {
+  margin: 5% 0;
+  color: #3d3d3d;
+}
+
+.about-info {
+  margin: 5% 5%;
+}
+
+.about-page img {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 1px 1px 8px rgba(0, 20, 3, 0.575);
+}
+
+.str-list {
+  text-align: center;
+  margin: 5% 10%;
+  background-image: url("/img/hmLogoFade.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+
+.str-list img {
+  width: 18%;
+  margin-top: 15%;
+}
+
+footer {
+  background-color: rgb(231, 231, 231);
+}
+
+.footer-info {
+  padding: 8% 5%;
+}
+
+.hr-footer {
+  width: 50%;
+  margin: auto;
+}
+
+footer img {
+  width: 25%;
+}
+
+/*
+  -------------------------------------------------------
+  Typography
+  -------------------------------------------------------
+*/
+
+body {
+  font-family: PopRegular, Arial, Helvetica, sans-serif;
+  color: #3d3d3d;
+}
+
+h1,
+h3 {
+  font-family: Satisfy, Arial, Helvetica, sans-serif;
+  font-size: 2.5em;
+  text-align: center;
+  text-shadow: 1px 1px 2px #e2e2e2;
+}
+
+h3 {
+  margin: 10% 0 5% 0;
+  text-decoration: underline;
+}
+
+h4 {
+  font-family: Satisfy, Arial, Helvetica, sans-serif;
+  font-size: 1.8em;
+  text-shadow: 1px 1px 2px #e2e2e2;
+}
+
+h5 {
+  font-size: 1em;
+  text-shadow: 1px 1px 2px #e2e2e2;
+}
+
+.intro-title p {
+  font-size: 0.9em;
   text-align: center;
 }
 
-.conceptItems h5 {
-  font-size: 1.2em;
-  padding-bottom: 4%;
+.about-page {
+  text-align: center;
 }
 
-.sidePhotos {
+.about-page p {
+  font-family: PopLight, Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+
+.concept h5 {
+  font-family: Satisfy, Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  color: #fff;
+  text-shadow: 1px 1px 5px #3d3d3d;
+}
+
+.concept p {
+  font-family: PopLight, Arial, Helvetica, sans-serif;
+}
+
+.follow-us {
+  margin: 5% 0;
+}
+
+.follow-icons {
+  margin: 20% auto;
+  text-align: center;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 100%;
-  overflow: hidden;
+  justify-content: center;
 }
 
-.sidePhotos img {
-  border-radius: 10px;
-  width: 90%;
-  margin-left: 5%;
+.follow-links {
+  background-color: aqua;
+  cursor: pointer;
+  width: 100%;
+}
+
+.follow-icons img {
+  width: 25%;
 }
 
 footer {
   text-align: center;
-  cursor: default;
-  height: 5vh;
+  text-shadow: none;
+}
+
+/*
+  -------------------------------------------------------
+  Fixed BG
+  -------------------------------------------------------
+*/
+
+.concept {
+  height: 100%;
+  text-align: center;
+}
+
+.concept h5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.fixed-bg {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.scroll-info {
+  padding: 15% 5%;
+  background-color: #fff;
+}
+
+.fixed-bg-1 {
+  background-image: url("/img/coupleRoad.jpg");
+}
+.fixed-bg-2 {
+  background-image: url("/img/bridePrep.jpg");
+  background-position: left;
+}
+.fixed-bg-3 {
+  background-image: url("/img/coupleBeach.jpg");
 }
 
 /*
@@ -370,7 +329,18 @@ footer {
     opacity: 0;
   }
   100% {
-    opacity: 100;
+    opacity: 1;
+  }
+}
+
+@keyframes navFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -382,209 +352,13 @@ footer {
 
 /* Media Queries */
 
-@media (max-width: 576px) {
-  body {
-    background-image: url("../img/palmBGXs.jpg");
-    background-size: 70%;
-    background-repeat: no-repeat;
-  }
-
-  main {
-    background-color: rgba(255, 255, 255, 0.63);
-  }
-
-  h3 {
-    font-size: 0.9em;
-  }
-
-  h4 {
-    font-size: 2em !important;
-  }
-
-  #logo {
-    width: 80%;
-  }
-  .introPage {
-    height: 100%;
-    margin: 0;
-  }
-
-  .nav-links {
-    display: none !important;
-  }
-
-  .introduction {
-    display: flex;
-    flex-direction: column !important;
-    text-align: center;
-  }
-
-  .intro-details p {
-    font-size: 0.8em;
-  }
-
-  #intro-heart {
-    width: 100%;
-    font-size: 0.8em;
-    margin-left: 0 !important;
-    padding: 7% 15%;
-  }
-
-  .slideshow {
-    width: 100% !important;
-  }
-
-  .slideshow img {
-    width: 100;
-    box-shadow: none;
-    border-radius: 0;
-  }
-
-  .about {
-    height: 100%;
-    margin: 0 15%;
-    flex-direction: column;
-  }
-
-  .aboutInfo {
-    font-size: 1em;
-  }
-
-  .aboutTitle img {
-    width: 100%;
-  }
-
-  .hrInfo {
-    border-top: 1px solid #3d3d3d;
-  }
-
-  .str {
-    height: 100%;
-    margin: 0 10%;
-  }
-
-  .str-list {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.1em;
-    background-size: 40%;
-  }
-
-  .concept {
-    height: auto;
-  }
-
-  .conceptPage {
-    margin: 0 auto;
-    display: block;
-    width: 100%;
-  }
-
-  .conceptPage img {
-    border-radius: 0 !important;
-    box-shadow: none !important;
-  }
-
-  #road {
-    width: 100;
-  }
-
-  .conceptTitle {
-    margin: 10% 0;
-  }
-  .conceptItems h5 {
-    font-family: Satisfy, Arial, Helvetica, sans-serif;
-    font-size: 1.4em;
-  }
-
-  .conceptItems p {
-    font-family: PopLight, Arial, Helvetica, sans-serif;
-  }
-
-  .conceptItem {
-    margin: 10% 0;
-  }
-
-  .sidePhotos img {
-    width: 100%;
-    margin: 0 auto;
-    height: 100%;
-  }
-
-  footer {
-    height: 5vh;
-  }
+@media (min-width: 576px) {
 }
-@media (max-width: 768px) {
-  nav {
-    background-image: none;
-  }
-
-  .nav-links {
-    background-color: #fff;
-    position: absolute;
-    right: 0px;
-    height: 90vh;
-    top: 10vh;
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    margin: 0;
-  }
-
-  .burger {
-    display: block;
-    margin-right: 10%;
-  }
-
-  .logo-container {
-    margin-left: 10%;
-  }
+@media (min-width: 768px) {
 }
-@media (max-width: 992px) {
+@media (min-width: 992px) {
 }
-@media (max-width: 1200px) {
-  .introPage {
-    flex-direction: column;
-  }
-
-  .nav-link {
-    font-size: 1.1em;
-    margin-left: 1.3rem;
-  }
-
-  .introduction {
-    margin-top: 5%;
-    height: 100%;
-    font-size: 0.9em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  #intro-heart {
-    margin-left: 15%;
-    text-align: center;
-    flex: 1;
-  }
-
-  .intro-details {
-    flex: 1;
-    padding: 5% 0;
-    font-family: PopLight, Helvetica, sans-serif;
-    font-size: 1.4em;
-  }
-
-  .slideshow {
-    height: 60vh;
-    width: 80%;
-    margin: 0 auto;
-  }
-  .slideshow img {
-    width: 100%;
-  }
+@media (min-width: 1200px) {
 }
 
 /*
