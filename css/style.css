@@ -485,12 +485,12 @@ footer {
 }
 @media (min-width: 992px) {
   body {
-    background-image: url(/img/palmBG.jpg);
+    background-image: url("../img/palmBG.jpg");
     background-size: cover;
   }
 
   .navbar {
-    background-image: url(/img/navBG.png);
+    background-image: url("../img/navBG.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
