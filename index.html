@@ -12,11 +12,13 @@
       <nav class="navbar">
         <div class="logo-container">
           <a class="logo-nav" href="index.html"
-            ><img src="./img/newLogo.png" alt="logo"
+            ><img src="/img/newLogo.png" alt="logo"
           /></a>
         </div>
         <ul class="nav-links">
-          <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active">Home</a>
+          </li>
           <li class="nav-item"><a href="#" class="nav-link">Packages</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Photo Plan</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Album</a></li>
@@ -34,7 +36,7 @@
       <section class="intro-page">
         <div class="intro-title">
           <h1>HM Wedding <br />Saipan</h1>
-          <img src="./img/smallHeart.png" alt="heart" />
+          <img src="/img/smallHeart.png" alt="heart" />
           <p>
             Imagine your special day, surrounded by natural beauty and
             tranquility, where there is no other place better to say, <br />"I
@@ -43,55 +45,85 @@
           </p>
         </div>
         <div class="slideshow">
-          <img src="./img/hyattGardenXs.jpg" alt="garden wedding" />
-          <img src="./img/hyattChapelXs.jpg" alt="garden wedding" />
-          <img src="./img/surfBeachXs.jpg" alt="garden wedding" />
+          <div class="slide">
+            <picture>
+              <source
+                srcset="/img/hyattGarden.jpg"
+                media="(min-width: 992px)"
+              />
+              <img src="/img/hyattGardenMd.jpg" alt="garden wedding" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture
+              ><source
+                srcset="/img/hyattChapel.jpg"
+                media="(min-width: 992px)"
+              />
+              <img src="/img/hyattChapelMd.jpg" alt="chapel wedding" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture
+              ><source srcset="/img/surfBeach.jpg" media="(min-width: 992px)" />
+              <img src="/img/surfBeachMd.jpg" alt="beach wedding"
+            /></picture>
+          </div>
         </div>
-        <hr />
       </section>
       <section class="about-page">
         <h3>About Us</h3>
-        <img src="./img/hiromiMain.jpg" alt="hiromi matagolai" />
-        <div class="about-info">
-          <hr class="hr-about" />
-          <h4>Hiromi Matagolai</h4>
-          <h5>Wedding planner, Owner</h5>
-          <br />
+        <div class="about-title">
+          <img src="/img/hiromiMain.jpg" alt="hiromi matagolai" />
+          <div class="about-info">
+            <hr class="hr-about" />
+            <h4>Hiromi Matagolai</h4>
+            <h5>Wedding planner, Owner</h5>
+            <br />
 
-          <p>Biography:</p>
-          <br />
-          <p>
-            I moved to Saipan on 1985, and married in 1988. I started my wedding
-            coordinator career in 1995 working for Fukada Wedding. I later
-            became a Couture Naoco Saipan branch manager in 2001. Finally, I
-            created my very own wedding company, HM WEDDING SAIPAN, in 2019. My
-            hobbies are windsurfing, SUP, and snorkeling.
-          </p>
-          <br />
-          <p>Thank you for visiting HM Wedding Saipan today!</p>
-          <hr class="hrInfo" />
+            <p>Biography:</p>
+            <br />
+            <p>
+              I moved to Saipan on 1985, and married in 1988. I started my
+              wedding coordinator career in 1995 working for Fukada Wedding. I
+              later became a Couture Naoco Saipan branch manager in 2001.
+              Finally, I created my very own wedding company, HM WEDDING SAIPAN,
+              in 2019. My hobbies are windsurfing, SUP, and snorkeling.
+            </p>
+            <br />
+            <p>Thank you for visiting HM Wedding Saipan today!</p>
+            <hr class="hr-about" />
+          </div>
         </div>
       </section>
       <section class="str">
         <h3>Our Strengths</h3>
         <div class="str-list">
-          <img src="./img/fast.svg" alt="clock" />
-          <p>
-            Respond quickly, including local information because we live in
-            Saipan
-          </p>
-          <img src="./img/check.svg" alt="checkmark" />
-          <p>
-            24 years of experience, achievements, and bringing smiles
-          </p>
-          <img src="./img/language.svg" alt="language" />
-          <p>
-            Team members are professional Japanese agent
-          </p>
-          <img src="./img/thumbsUp.svg" alt="thumbsUp" />
-          <p>
-            Corresponds to special requests as much as possible
-          </p>
+          <div class="str-item">
+            <img src="/img/fast.svg" alt="clock" />
+            <p>
+              Respond quickly, including local information because we live in
+              Saipan
+            </p>
+          </div>
+          <div class="str-item">
+            <img src="/img/check.svg" alt="checkmark" />
+            <p>
+              24 years of experience, achievements, and bringing smiles
+            </p>
+          </div>
+          <div class="str-item">
+            <img src="/img/language.svg" alt="language" />
+            <p>
+              Team members are professional Japanese agent
+            </p>
+          </div>
+          <div class="str-item">
+            <img src="/img/thumbsUp.svg" alt="thumbsUp" />
+            <p>
+              Corresponds to special requests as much as possible
+            </p>
+          </div>
         </div>
         <hr />
       </section>
@@ -102,6 +134,7 @@
         </div>
         <div class="scroll-info">
           <p>
+            <span>Full Attention</span><br /><br />
             Your special day is our priority. With one wedding ceremony a day
             package plan, our Saipan team will surely create an original wedding
             day just for you.
@@ -112,6 +145,7 @@
         </div>
         <div class="scroll-info">
           <p>
+            <span>Pricing</span><br /><br />
             At HM Wedding, we understand that every little things matter.
             Couples can bring their own attire and accessories, free of charge.
             Feel free to contact us directly for any other price inquiry.
@@ -122,6 +156,7 @@
         </div>
         <div class="scroll-info">
           <p>
+            <span>Saipan's locations</span><br /><br />
             Wedding venue is surrounded by our nature- rich Saipan Island. We
             prepare special wedding plans unique like our garden wedding, white
             sand beach wedding, and cruise wedding surrounded by the sea of
@@ -136,12 +171,12 @@
           <a
             href="https://www.facebook.com/hmweddingsaipan/"
             class="follow-link"
-            ><img src="./img/facebook.svg" alt="facebook"
+            ><img src="/img/facebook.svg" alt="facebook"
           /></a>
           <a
             href="https://www.instagram.com/hm_wedding_saipan/"
             lass="follow-link"
-            ><img src="./img/instagram.svg" alt="instagram"
+            ><img src="/img/instagram.svg" alt="instagram"
           /></a>
         </div>
       </section>
@@ -149,7 +184,7 @@
     <footer>
       <div class="footer-info">
         <a href="index.html" lass="follow-link"
-          ><img src="./img/hmLogo.png" alt="logo"
+          ><img src="/img/hmLogo.png" alt="logo"
         /></a>
         <hr class="hr-footer" />
         <p>HM Wedding Saipan</p>
@@ -161,6 +196,6 @@
         >Designed Peter Matagolai<br />All rights reserved. &copy; hmsaipan.com
       </small>
     </footer>
-    <script src="js/app.js"></script>
+    <script src="/js/app.js"></script>
   </body>
 </html>
