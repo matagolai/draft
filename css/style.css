@@ -89,6 +89,7 @@ nav {
 .nav-link:hover {
   border-bottom: 2px solid #fca402cc;
   color: #688d43;
+  transition: color 0.4s ease-in;
 }
 
 .active {
@@ -106,8 +107,8 @@ nav {
 }
 
 .burger div {
-  width: 25px;
-  height: 3px;
+  width: 20px;
+  height: 2px;
   background-color: #688d43;
   margin: 5px;
 }
@@ -225,6 +226,42 @@ small {
   display: block;
 }
 
+.wedding-packages {
+  animation: fadeIn 1s ease-in;
+}
+
+.wedding-packages ul,
+.optionals ul {
+  margin: 2% 10%;
+}
+.wedding-packages li,
+.optionals li {
+  margin: 5% 0;
+}
+
+.package {
+  background-color: rgba(255, 255, 255, 0.747);
+  padding: 5% 5%;
+}
+
+.optional {
+  display: flex;
+}
+.optional img {
+  width: 50%;
+}
+.optional p {
+  text-align: center;
+}
+
+.venue {
+  background-color: rgba(255, 255, 255, 0.747);
+}
+
+.venue img {
+  width: 100%;
+}
+
 /*
   -------------------------------------------------------
   Typography
@@ -256,6 +293,7 @@ h4 {
   font-family: Satisfy, Arial, Helvetica, sans-serif;
   font-size: 1.8em;
   text-shadow: 1px 1px 2px #e2e2e2;
+  text-align: center;
 }
 
 h5 {
@@ -281,13 +319,31 @@ h5 {
   text-align: left;
 }
 
-.concept h5 {
+.concept h5,
+.package-title {
   font-family: Satisfy, Arial, Helvetica, sans-serif;
   font-size: 3rem;
   color: #fff;
   text-shadow: 1px 1px 5px #3d3d3d;
   text-align: center;
   padding: 0 5%;
+}
+
+.package h5 {
+  font-size: 2rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 5px #e2e2e2;
+}
+
+.optionals h4 {
+  padding: 3% 0;
+}
+
+.optionals h5 {
+  font-weight: 300;
+  text-shadow: 1px 1px 5px #e2e2e2;
+  text-align: center;
+  text-decoration: underline;
 }
 
 .concept p {
@@ -323,7 +379,8 @@ footer {
   height: 100%;
 }
 
-.concept h5 {
+.concept h5,
+.package-title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -351,6 +408,15 @@ footer {
 }
 .fixed-bg-3 {
   background-image: url("../img/coupleBeach.jpg");
+}
+.fixed-bg-4 {
+  background-image: url("../img/simplePackage.jpg");
+}
+.fixed-bg-5 {
+  background-image: url("../img/premiumPackage.jpg");
+}
+.fixed-bg-6 {
+  background-image: url("../img/perfectPackage.jpg");
 }
 
 /*
@@ -388,12 +454,14 @@ footer {
 
 @media (min-width: 576px) {
   .logo-container img {
-    width: 100%;
+    width: 80%;
   }
   .nav-links {
     width: 40%;
-    font-size: 1.1em;
+    font-size: 1em;
+    height: 90vh;
   }
+
   .intro-title {
     font-size: 1.2em;
   }
@@ -485,12 +553,12 @@ footer {
 }
 @media (min-width: 992px) {
   body {
-    background-image: url("../img/palmBG.jpg");
+    background-image: url(../img/palmBG.jpg);
     background-size: cover;
   }
 
   .navbar {
-    background-image: url("../img/navBG.png");
+    background-image: url(../img/navBG.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
