@@ -248,7 +248,7 @@ small {
   display: flex;
 }
 .optional img {
-  width: 50%;
+  width: 100%;
 }
 .optional p {
   text-align: center;
